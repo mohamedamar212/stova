@@ -1,109 +1,40 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+function changeLanguage(language) {
+  const translations = {
+    en: {
+      home: "Home",
+      shop: "Shop",
+      about: "About Us",
+      login: "Login",
+      title: "Stova for Old Money Style",
+      description: "The best fashion collections with a timeless old money style.",
+      loginTitle: "Login",
+      usernameLabel: "Username:",
+      passwordLabel: "Password:",
+      loginButton: "Login"
+    },
+    ar: {
+      home: "الصفحة الرئيسية",
+      shop: "المتجر",
+      about: "من نحن",
+      login: "تسجيل الدخول",
+      title: "ستوفا لأناقة المال القديم",
+      description: "أفضل تشكيلات الموضة بأسلوب المال القديم الدائم.",
+      loginTitle: "تسجيل الدخول",
+      usernameLabel: "اسم المستخدم:",
+      passwordLabel: "كلمة المرور:",
+      loginButton: "دخول"
+    }
+  };
 
-header {
-  background-color: #f5f5dc; /* Beige color */
-  color: black;
-  padding: 10px 0;
-  text-align: center;
-}
+  const lang = translations[language];
 
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-header nav ul li a {
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-header nav ul li button {
-  padding: 5px 10px;
-  margin: 0 5px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.hero {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.hero img {
-  max-width: 100%;
-  height: auto;
-}
-
-.hero h1 {
-  font-size: 36px;
-  color: #333;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #666;
-}
-
-.stova-tag {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1c1c1c;
-  margin-top: 15px;
-}
-
-.login-section {
-  text-align: center;
-  margin: 40px;
-}
-
-.login-section form {
-  display: inline-block;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.login-section input {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  width: 200px;
-  border: 1px solid #ccc;
-}
-
-.login-section button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-section button:hover {
-  background-color: #218838;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f5f5dc; /* Beige color */
-  color: black;
-}
+  document.querySelector('.home').textContent = lang.home;
+  document.querySelector('.shop').textContent = lang.shop;
+  document.querySelector('.about').textContent = lang.about;
+  document.querySelector('.login').textContent = lang.login;
+  document.querySelector('.title').textContent = lang.title;
+  document.querySelector('.description').textContent = lang.description;
+  document.querySelector('.login-title').textContent = lang.loginTitle;
+  document.querySelector('.username-label').textContent = lang.usernameLabel;
+  document.querySelector('.password-label').textContent = lang.passwordLabel;
+  document.querySelector('.login-button').textContent = lang.loginButton;
