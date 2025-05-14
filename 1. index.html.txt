@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stova for Old Money Style - متجر لبيع الهدوم بتصاميم قديمة بأسلوب مودرن." />
+  <meta name="keywords" content="Stova, Old Money Style, متجر هدوم, ملابس مودرن, ستايل قديم" />
+  <meta name="author" content="Stova" />
+  <title>Stova for Old Money Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Stova for Old Money Style</h1>
+    <button onclick="showLogin('user')">تسجيل مستخدم</button>
+    <button onclick="showLogin('admin')">دخول المشرف</button>
+  </header>
+
+  <div class="banner">
+    <!-- هنا الصورة لستايل مودرن أولد ماني -->
+    <img src="https://images.unsplash.com/photo-1584627260682-b50e92fa8ba9?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA5OXwwfDF8c2VhY2h8Mnx8Zm9yY2V8ZW58MHx8fHwxNjcwNTcxMTIz&ixlib=rb-1.2.1&q=80&w=1080" alt="مودرن أولد ماني" />
+  </div>
+
+  <div class="container">
+    <div id="auth-section" class="form-section"></div>
+
+    <div id="add-product" class="form-section hidden">
+      <h2>إضافة منتج</h2>
+      <input type="text" id="product-name" placeholder="اسم المنتج">
+      <input type="text" id="product-price" placeholder="سعر المنتج">
+      <input type="text" id="product-image" placeholder="رابط صورة المنتج">
+      <button onclick="addProduct()">أضف</button>
+    </div>
+
+    <div class="products">
+      <h2>المنتجات</h2>
+      <div id="products" class="products-list"></div>
+    </div>
+
+    <div id="admin-panel" class="dashboard hidden">
+      <h2>لوحة تحكم المشرف</h2>
+      <h3>تفاصيل الحسابات:</h3>
+      <div id="users-info"></div>
+      <h3>تفاصيل الطلبات:</h3>
+      <div id="orders-info"></div>
+      <h3>إحصائيات المنتجات:</h3>
+      <div id="product-stats"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Stova
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
