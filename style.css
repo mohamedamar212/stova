@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav ul li button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+}
+
+.login-section {
+  text-align: center;
+  margin: 40px;
+}
+
+.login-section form {
+  display: inline-block;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.login-section input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+.login-section button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background-color: #218838;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #001f3f;
+  color: white;
+}
