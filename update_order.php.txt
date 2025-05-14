@@ -1,0 +1,24 @@
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "stova";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$order_id = $_POST['order_id'];
+$new_status = $_POST['status'];
+
+$sql = "UPDATE orders SET status = '$new_status' WHERE order_id = '$order_id'";
+
+if ($conn->query($sql) === TRUE) {
+  echo "تم تحديث حالة الطلب بنجاح!";
+} else {
+  echo "خطأ في تحديث حالة الطلب: " . $conn->error;
+}
+
+$conn->close();
+?>
