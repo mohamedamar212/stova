@@ -1,80 +1,102 @@
 body {
-  font-family: 'Cairo', sans-serif;
-  background-color: #f0e8d8; /* بيج فاتح */
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
   color: #333;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #fff;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
   text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #ddd;
 }
 
-h1 {
-  font-size: 2.5em;
+header nav ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #4CAF50;
+header nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav ul li button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #28a745;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-}
-
-.container {
-  padding: 20px;
-}
-
-.form-section {
+.hero {
+  text-align: center;
   margin: 20px 0;
 }
 
-input {
-  display: block;
-  width: 100%;
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+}
+
+.login-section {
+  text-align: center;
+  margin: 40px;
+}
+
+.login-section form {
+  display: inline-block;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.login-section input {
   padding: 10px;
   margin: 10px 0;
-  font-size: 1em;
-}
-
-.hidden {
-  display: none;
-}
-
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.products-list .product {
-  margin: 10px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
   border-radius: 5px;
-  text-align: center;
-  width: 30%;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+.login-section button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background-color: #218838;
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: #4CAF50;
+  padding: 20px;
+  background-color: #007bff;
   color: white;
 }
