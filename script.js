@@ -1,57 +1,41 @@
-// مثال على إضافة المنتجات
-let products = [];
+function changeLanguage(language) {
+  const translations = {
+    en: {
+      home: "Home",
+      shop: "Shop",
+      about: "About Us",
+      login: "Login",
+      title: "Stova for Old Money Style",
+      description: "The best fashion collections with a timeless old money style.",
+      loginTitle: "Login",
+      usernameLabel: "Username:",
+      passwordLabel: "Password:",
+      loginButton: "Login"
+    },
+    ar: {
+      home: "الصفحة الرئيسية",
+      shop: "المتجر",
+      about: "من نحن",
+      login: "تسجيل الدخول",
+      title: "ستوفا لأناقة المال القديم",
+      description: "أفضل تشكيلات الموضة بأسلوب المال القديم الدائم.",
+      loginTitle: "تسجيل الدخول",
+      usernameLabel: "اسم المستخدم:",
+      passwordLabel: "كلمة المرور:",
+      loginButton: "دخول"
+    }
+  };
 
-function showLogin(type) {
-  if (type === 'user') {
-    document.getElementById('auth-section').innerHTML = `
-      <h2>تسجيل مستخدم</h2>
-      <input type="text" placeholder="اسم المستخدم">
-      <input type="password" placeholder="كلمة المرور">
-      <button onclick="registerUser()">تسجيل</button>
-    `;
-  } else if (type === 'admin') {
-    document.getElementById('auth-section').innerHTML = `
-      <h2>دخول المشرف</h2>
-      <input type="text" placeholder="اسم المستخدم">
-      <input type="password" placeholder="كلمة المرور">
-      <button onclick="loginAdmin()">دخول</button>
-    `;
-  }
+  const lang = translations[language];
+
+  document.querySelector('.home').textContent = lang.home;
+  document.querySelector('.shop').textContent = lang.shop;
+  document.querySelector('.about').textContent = lang.about;
+  document.querySelector('.login').textContent = lang.login;
+  document.querySelector('.title').textContent = lang.title;
+  document.querySelector('.description').textContent = lang.description;
+  document.querySelector('.login-title').textContent = lang.loginTitle;
+  document.querySelector('.username-label').textContent = lang.usernameLabel;
+  document.querySelector('.password-label').textContent = lang.passwordLabel;
+  document.querySelector('.login-button').textContent = lang.loginButton;
 }
-
-function registerUser() {
-  // إضافة منطق التسجيل هنا
-}
-
-function loginAdmin() {
-  // إضافة منطق الدخول للمشرف هنا
-  document.getElementById('admin-panel').classList.remove('hidden');
-}
-
-function addProduct() {
-  let name = document.getElementById('product-name').value;
-  let price = document.getElementById('product-price').value;
-  let image = document.getElementById('product-image').value;
-
-  if (name && price && image) {
-    let newProduct = { name, price, image };
-    products.push(newProduct);
-    renderProducts();
-  }
-}
-
-function renderProducts() {
-  let productsContainer = document.getElementById('products');
-  productsContainer.innerHTML = '';
-
-  products.forEach(product => {
-    productsContainer.innerHTML += `
-      <div class="product">
-        <img src="${product.image}" alt="${product.name}" />
-        <h3>${product.name}</h3>
-        <p>${product.price} جنيه</p>
-      </div>
-    `;
-  });
-}
-
